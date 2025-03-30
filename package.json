@@ -15,7 +15,7 @@
       "eject": "react-scripts eject",
       "deploy": "gh-pages -d build"
     },
-    "homepage": "https://sabarish575.github.io/color-palette-and-ui-generator",
+    "homepage": " https://sabarish575.github.io/Color-palette-and-ui-generator/",
     "devDependencies": {
       "gh-pages": "^5.0.0"
     },
