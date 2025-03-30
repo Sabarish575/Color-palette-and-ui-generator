@@ -28,8 +28,8 @@ This project is a CSS-based **color palette and UI generator** that provides a v
 4.Update the HTML structure as needed for additional customization.
 
 ## **Future Enhancements**
---Implement JavaScript for real-time color selection.
+- Implement JavaScript for real-time color selection.
 
---Add animations and transitions for better UI experience.
+- Add animations and transitions for better UI experience.
 
---Improve accessibility for better usability.
+- Improve accessibility for better usability.
