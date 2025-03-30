@@ -1,0 +1,222 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    background-color: darkgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 1.7em;
+}
+h1{
+    text-align: center;
+    margin-bottom: 2px;
+}
+hr{
+    margin-top: 10px;
+    border:2px solid black;
+    border-radius: 10px;
+}
+/* Outer Container */
+.outer-container {
+    width: 968px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Right Panel */
+.right {
+    width: 30%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Input Field */
+input {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Input Focus Effect */
+input:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Right Panel Text */
+.right p {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+/* Left Panel Grid */
+.left {
+    display: grid;
+    gap: 1rem;
+    padding: 20px;
+    grid-template-areas:
+        'card-1 card-1 card-1'
+        'card-5 card-5 card-4'
+        'card-2 card-3 card-4';
+}
+
+/* Card Styling */
+.card {
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid black;
+}
+
+/* Hover Effect for Cards */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Specific Card Areas */
+.card-1 { grid-area: card-1; }
+.card-2 { grid-area: card-2; }
+.card-3 { grid-area: card-3; }
+.card-4 { grid-area: card-4; }
+.card-5 { grid-area: card-5; }
+
+.card-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card-5{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Button Inside .card-5 */
+.card-5 button {
+    width: 100px;
+    height: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button Hover Effect */
+.card-5 button:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Image Size Inside Cards */
+.card-2 img {
+    width: 120px;
+    height: 110px;
+}
+
+
+
+/* Graph Styling */
+.graph {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border: 2px solid black;
+    gap: 1rem;
+}
+
+/* Bars */
+.bar {
+    width: 20px;
+    background-color: black;
+    border-right: 2px solid white;
+    transition: height 0.5s ease, background-color 0.3s ease;
+}
+
+/* Bar Hover Effect */
+.bar:hover {
+    transform: scale(1.1);
+}
+
+/* Bar Heights */
+.bar-1 { height: 80px; }
+.bar-2 { height: 60px; }
+.bar-3 { height: 40px; }
+.bar-4 { height: 20px; }
+.bar-5 { height: 10px; }
+
+/* Media Queries for Responsiveness */
+@media (max-width: 860px) {
+    .outer-container {
+        width: 678px;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 700px) {
+    .outer-container {
+        width: 478px;
+    }
+}
+
+@media (max-width: 495px) {
+    .outer-container {
+        width: 278px;
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .left {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .card {
+        width: 150px;
+        height: 100px;
+        padding: 10px;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .card-5 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-5 button {
+        width: 80px;
+        height: 25px;
+    }
+
+    .card-2 img {
+        width: 60px;
+        height: 55px;
+    }
+}
